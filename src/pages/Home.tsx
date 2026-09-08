@@ -558,12 +558,6 @@ export default function Home() {
               src={currentSong.src}
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleLoadedMetadata}
-              onCanPlay={() => {
-                // Intenta la autorreproducción en cuanto el audio esté listo
-                if (audioRef.current && !isPlaying) {
-                  audioRef.current.play().then(() => setIsPlaying(true)).catch(() => { });
-                }
-              }}
             />
 
             <div>
